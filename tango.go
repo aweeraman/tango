@@ -1,8 +1,8 @@
 package main
 
 import (
-	"fmt"
 	"flag"
+	"fmt"
 	"os"
 )
 
@@ -38,10 +38,11 @@ func main() {
 
 	cmd := flag.Args()[0]
 
-	switch(cmd) {
-		case "serve": serve(port)
-		default:
-			fmt.Fprintf(os.Stderr, "Invalid command\n\n")
-			usage()
+	switch cmd {
+	case "serve":
+		serve(port)
+	default:
+		fmt.Fprintf(os.Stderr, "Invalid command\n\n")
+		usage()
 	}
 }
